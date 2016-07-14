@@ -7,7 +7,7 @@ Documentation  Demonstrate Selenium2Library by googling.
 
 *** Variables ***
 ${HOMEPAGE}     http://www.google.com
-${BROWSER}      firefox
+${BROWSER}      chrome
 
 *** Test Cases ***
 Google searches and verifying results
@@ -31,8 +31,8 @@ Google and check results
 *** Keywords ***
 Google and check results
     [Arguments]     ${searchkey}    ${result}
-    input text     id=gbqfq    ${searchkey}
-    click button      id=gbqfb
+    input text     id=lst-ib    ${searchkey}
+    click button      name=btnG
     wait until page contains    ${result}
 
 
